@@ -1,0 +1,20 @@
+html, body, header, footer, select, article, aside, hgroup, main, nav, div,
+ol, ul, dl, li, dt, dd, figure, img, h1, h2, h3, h4 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: inherit;
+  font-size: 100%;
+}
+
+body {
+  line-height: 1.5;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
