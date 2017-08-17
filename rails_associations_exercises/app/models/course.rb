@@ -11,7 +11,7 @@
 #
 
 class Course < ApplicationRecord
-  
+
   has_many :enrollments,
     primary_key: :id,
     foreign_key: :course_id,
@@ -27,9 +27,17 @@ class Course < ApplicationRecord
     foreign_key: :prereq_id,
     class_name: :Course
 
-  has_one :instructor,
-    primary_key: :instructor_id,
-    foreign_key: :id,
+  #   Only works with a single instructor per course. Lower version is more
+  #   realistic.
+  #
+  # has_one :instructor,
+  #   primary_key: :instructor_id,
+  #   foreign_key: :id,
+  #   class_name: :User
+
+  belongs_to :instructor,
+    primary_key: :id,
+    foreign_key: :instructor_id,
     class_name: :User
 
 end
